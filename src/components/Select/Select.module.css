@@ -1,0 +1,45 @@
+.input {
+    border: 1px solid black;
+    width: 190px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px;
+}
+
+.img {
+    width: 25px;
+    border-radius: 6px;
+    opacity: 0.5;
+}
+
+.img:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.img:active {
+    opacity: 1;
+}
+
+.selectionBox {
+    border: 1px solid black;
+    width: 200px;
+}
+
+.selectionBox:last-child {
+    border-bottom: none;
+}
+
+.selectItem {
+    padding: 5px 10px;
+    border-bottom: 1px solid black;
+}
+
+.hoveredItem {
+    background-color: rgba(73, 75, 76, 0.1);
+    cursor: pointer;
+}
+
+
