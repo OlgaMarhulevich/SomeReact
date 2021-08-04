@@ -5,7 +5,7 @@ type UncontrolledRatingPropsType = {
     defaultValue?: RatingValueType
 }
 
-export function UncontrolledRating(props: UncontrolledRatingPropsType) {
+export function UncontrolledRatingBeforeMemo(props: UncontrolledRatingPropsType) {
     console.log('UncontrolledRating rendered');
 
     let [value, setValue] = useState(props.defaultValue ? props.defaultValue : 0);
@@ -18,6 +18,7 @@ export function UncontrolledRating(props: UncontrolledRatingPropsType) {
         <div> {stars} </div>
     )
 }
+export const UncontrolledRating = React.memo(UncontrolledRatingBeforeMemo)
 
 type StarPropsType = {
     id: number
@@ -25,10 +26,11 @@ type StarPropsType = {
     setValue: (id: number) => void
 }
 
-function Star(props: StarPropsType) {
+function StarBeforeMemo(props: StarPropsType) {
     console.log('star rendered');
 
     return <span style={{cursor: 'pointer'}} onClick={() => props.setValue(props.id)}>
               {props.selected ? <b>star </b> : 'star '}
            </span>
 }
+export const Star = React.memo(StarBeforeMemo)

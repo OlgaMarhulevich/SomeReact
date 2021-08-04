@@ -6,7 +6,7 @@ type OnOffPropsType = {
     setOn: (on: boolean) => void
 }
 
-export function OnOff(props: OnOffPropsType) {
+export function OnOffBeforeMemo(props: OnOffPropsType) {
 
     const onStyle = {
         cursor: "pointer",
@@ -47,3 +47,4 @@ export function OnOff(props: OnOffPropsType) {
         </div>
     )
 }
+export const OnOff = React.memo(OnOffBeforeMemo)

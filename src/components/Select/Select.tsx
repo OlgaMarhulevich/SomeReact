@@ -12,7 +12,7 @@ type SelectPropsType = {
     items: ItemType[]
 }
 
-export function Select(props: SelectPropsType) {
+export function SelectBeforeMemo(props: SelectPropsType) {
     console.log('Select rendering')
 
     let [collapsedSelect, setCollapsedSelect] = useState(true)
@@ -70,3 +70,4 @@ return <div>
 
 </div>
 }
+export const Select = React.memo(SelectBeforeMemo)

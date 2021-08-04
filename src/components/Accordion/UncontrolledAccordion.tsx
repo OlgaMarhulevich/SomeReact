@@ -6,7 +6,7 @@ type UncontrolledAccordionPropsType = {
 }
 
 
-function UncontrolledAccordion(props: UncontrolledAccordionPropsType) {
+function UncontrolledAccordionBeforeMemo(props: UncontrolledAccordionPropsType) {
     console.log('UncontrolledAccordion rendered');
 
     /*let [collapsed, setCollapsed] = useState(true);*/
@@ -19,20 +19,22 @@ function UncontrolledAccordion(props: UncontrolledAccordionPropsType) {
         {!state.collapsed && <UncontrolledAccordionBody/>}
     </>
 }
+export const UncontrolledAccordion = React.memo(UncontrolledAccordionBeforeMemo)
 
 type UncontrolledAccordionTitlePropsType = {
     onClick: () => void
     titleValue: string
 }
 
-function UncontrolledAccordionTitle(props: UncontrolledAccordionTitlePropsType) {
+function UncontrolledAccordionTitleBeforeMemo(props: UncontrolledAccordionTitlePropsType) {
     console.log('UncontrolledAccordionTitle rendered')
     return (
         <h3 style={{cursor: 'pointer'}} onClick={props.onClick}>{props.titleValue}</h3>
     )
 }
+export const UncontrolledAccordionTitle = React.memo(UncontrolledAccordionTitleBeforeMemo)
 
-function UncontrolledAccordionBody() {
+function UncontrolledAccordionBodyBeforeMemo() {
     console.log('UncontrolledAccordionBody rendered')
     return <ul>
         <li>1</li>
@@ -40,5 +42,6 @@ function UncontrolledAccordionBody() {
         <li>3</li>
     </ul>
 }
+export const UncontrolledAccordionBody = React.memo(UncontrolledAccordionBodyBeforeMemo)
 
 export default UncontrolledAccordion;
