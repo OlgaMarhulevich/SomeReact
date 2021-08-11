@@ -9,7 +9,7 @@ type ItemType = {
 type SelectPropsType = {
     value: any
     onChange: (value: any) => void
-    items: ItemType[]
+    items: Array<ItemType>
 }
 
 export function SelectBeforeMemo(props: SelectPropsType) {

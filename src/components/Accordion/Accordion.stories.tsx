@@ -4,7 +4,7 @@ import {action} from "@storybook/addon-actions";
 import Accordion from './Accordion';
 
 export default {
-    title: 'Accordion',
+    title: 'Components/Accordion',
     component: Accordion,
     argTypes: {},
 } as ComponentMeta<typeof Accordion>;

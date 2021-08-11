@@ -4,7 +4,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import {Rating, RatingValueType} from "./Rating";
 
 export default {
-    title: 'Rating',
+    title: 'Components/Rating',
     component: Rating,
     argTypes: {},
 } as ComponentMeta<typeof Rating>;

@@ -1,7 +1,7 @@
 import React, {useRef, useState} from 'react';
 
 export default {
-    title: 'Input'
+    title: 'Components/Input'
 }
 
 export const UncontrolledInput = () => <input/>;
