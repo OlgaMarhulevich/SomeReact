@@ -55,7 +55,7 @@ return <div>
 
         {selectedItem?.title || props.value}
 
-        <img className={s.img} src={'https://image.flaticon.com/icons/png/512/36/36751.png'}/>
+        <img className={s.img} src={'https://image.flaticon.com/icons/png/512/36/36751.png'} alt={''}/>
     </div>
 
     <div className={s.selectionBox}>

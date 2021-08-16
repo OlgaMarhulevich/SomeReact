@@ -5,12 +5,13 @@ export default {
     title: 'Memo/useMemo'
 }
 
+// DifficultCounting
+
 export const DifficultCounting = () => {
     const [a, setA] = useState(0)
     const [b, setB] = useState(0)
 
-
-    let factorialA = 1
+    let factorialA
     let factorialB = 1
 
     factorialA = useMemo(() => {
@@ -21,6 +22,7 @@ export const DifficultCounting = () => {
             while(fake < 10000) {
                 fake++
                 const fakeValue = Math.random()
+                console.log(fakeValue)
             }
             tempResA *= i
         }
@@ -47,6 +49,8 @@ export const DifficultCounting = () => {
     )
 }
 
+// Users adding
+
 const UsersBeforeReactMemo = (props: { users: Array<string> }) => {
     console.log('users rendering')
     return (
@@ -65,7 +69,6 @@ export const HelpForUsersReactMemo = () => {
     const [users, setUsers] = useState(['olya', 'tanya', 'artem', 'katya'])
 
     const newUsers = useMemo(() => {return users.filter(u => u.indexOf('e') > -1)}, [users])
-
     return (
         <>
             <button onClick={() => setCounter(counter + 1)}>+</button>
@@ -75,6 +78,8 @@ export const HelpForUsersReactMemo = () => {
         </>
     )
 }
+
+// Select
 
 const SelectMemo = React.memo(Select)
 
