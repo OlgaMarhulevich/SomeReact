@@ -1,5 +1,5 @@
 import React, {useMemo, useState} from "react";
-import {Select} from "../components/Select/Select";
+import {Select} from "../../components/Select/Select";
 
 export default {
     title: 'Memo/useMemo'
