@@ -61,18 +61,3 @@ export const WithSetInterval = () => {
         </>
     )
 }
-
-export const Time = () => {
-    let [time, setTime] = useState(new Date())
-    useEffect(() => {
-        setInterval(() => {
-            setTime(() => new Date())
-        }, 1000)
-    }, [])
-
-    return (
-        <>
-            {time.toLocaleTimeString()}
-        </>
-    )
-}
